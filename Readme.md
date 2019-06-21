@@ -5,6 +5,9 @@
 * [Default.aspx.cs](./CS/Default.aspx.cs) (VB: [Default.aspx.vb](./VB/Default.aspx.vb))
 <!-- default file list end -->
 # How to measure loading time on the server and client sides
+<!-- run online -->
+**[[Run Online]](https://codecentral.devexpress.com/t167926/)**
+<!-- run online end -->
 
 
 This example illustrates two approaches:<br /><br />1. How to measure and display loading time on the sever using the System.Diagnostics.Stopwatch class:<br />CS:<br />
