@@ -44,14 +44,14 @@ public partial class _Default : System.Web.UI.Page
         sw.Stop();
         AddEventLog(String.Format("ASPxGridView.DataBinding, Time: {0} ", sw.Elapsed.TotalMilliseconds));
     }
-    protected void ASPxGridView1_CustomColumnDisplayText(object sender, DevExpress.Web.ASPxGridView.ASPxGridViewColumnDisplayTextEventArgs e)
+    protected void ASPxGridView1_CustomColumnDisplayText(object sender, DevExpress.Web.ASPxGridViewColumnDisplayTextEventArgs e)
     {
         Stopwatch sw = System.Diagnostics.Stopwatch.StartNew();
         //some operations
         sw.Stop();
         AddEventLog(String.Format("CustomColumnDisplayText, FieldName:{0}, VisibleIndex: {1} , Time: " + sw.Elapsed.TotalMilliseconds, e.Column.FieldName, e.VisibleRowIndex));
     }
-    protected void ASPxGridView1_CustomJSProperties(object sender, DevExpress.Web.ASPxGridView.ASPxGridViewClientJSPropertiesEventArgs e)
+    protected void ASPxGridView1_CustomJSProperties(object sender, DevExpress.Web.ASPxGridViewClientJSPropertiesEventArgs e)
     {
         e.Properties.Add("cpTime", eventOrder);
     }

@@ -44,13 +44,13 @@ Partial Public Class _Default
         sw.Stop()
         AddEventLog(String.Format("ASPxGridView.DataBinding, Time: {0} ", sw.Elapsed.TotalMilliseconds))
     End Sub
-    Protected Sub ASPxGridView1_CustomColumnDisplayText(ByVal sender As Object, ByVal e As DevExpress.Web.ASPxGridView.ASPxGridViewColumnDisplayTextEventArgs)
+    Protected Sub ASPxGridView1_CustomColumnDisplayText(ByVal sender As Object, ByVal e As DevExpress.Web.ASPxGridViewColumnDisplayTextEventArgs)
         Dim sw As Stopwatch = System.Diagnostics.Stopwatch.StartNew()
         'some operations
         sw.Stop()
         AddEventLog(String.Format("CustomColumnDisplayText, FieldName:{0}, VisibleIndex: {1} , Time: " & sw.Elapsed.TotalMilliseconds, e.Column.FieldName, e.VisibleRowIndex))
     End Sub
-    Protected Sub ASPxGridView1_CustomJSProperties(ByVal sender As Object, ByVal e As DevExpress.Web.ASPxGridView.ASPxGridViewClientJSPropertiesEventArgs)
+    Protected Sub ASPxGridView1_CustomJSProperties(ByVal sender As Object, ByVal e As DevExpress.Web.ASPxGridViewClientJSPropertiesEventArgs)
         e.Properties.Add("cpTime", eventOrder)
     End Sub
 End Class
